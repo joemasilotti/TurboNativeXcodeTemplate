@@ -17,9 +17,9 @@ First, make sure you have Xcode downloaded and installed from the [App Store](ht
 Create a new directory for custom Xcode project templates. Then clone this repo into that directory.
 
 ```bash
-$ export DIR=~/Library/Developer/Xcode/Templates/Custom\ Templates
-$ mkdir -p $DIR
-$ git clone git@github.com:joemasilotti/TurboNativeXcodeTemplate.git $DIR/Turbo\ Native\ App.xctemplate
+export DIR=~/Library/Developer/Xcode/Templates/Custom\ Templates
+mkdir -p $DIR
+git clone git@github.com:joemasilotti/TurboNativeXcodeTemplate.git $DIR/Turbo\ Native\ App.xctemplate
 ```
 
 ### Create a new project
