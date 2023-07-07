@@ -15,6 +15,7 @@ class TurboNavigationController: UINavigationController {
 
     private lazy var session: Session = {
         let configuration = WKWebViewConfiguration()
+        // Identifies Turbo Native apps with `turbo_native_app?` helper in Rails.
         configuration.applicationNameForUserAgent = "Turbo Native iOS"
 
         let session = Session(webViewConfiguration: configuration)
