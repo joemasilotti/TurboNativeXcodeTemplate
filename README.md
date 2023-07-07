@@ -36,14 +36,12 @@ You might also need to add an organization identifier if you aren't signed in to
 
 Unfortunately, Xcode project templates don't directly support Swift packages. So we have to add it manually.
 
-![Add the turbo-ios Swift package to an Xcode project](.github/images/add-turbo-ios-swift-package.gif)
+![Add the turbo-ios Swift package to an Xcode project](.github/images/add-turbo-ios-swift-package-via-file.gif)
 
-1. Click the name of your app in the upper left.
-1. Select the Project (not target) from the middle column.
-1. Select the Package Dependencies tab from the top.
-1. Click the `+` to add a new package.
-1. In the upper right, enter `https://github.com/hotwired/turbo-ios`.
-1. Click Add Package and Add Package again.
+1. Click File → Add Packages…
+2. In the search box in the upper right, enter: `https://github.com/hotwired/turbo-ios`
+3. Click Add Package
+4. Click Add Package, again
 
 Run the app via Product → Run. If all went well it should launch in the simulator!
 
