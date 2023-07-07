@@ -1,3 +1,15 @@
+/**
+
+ ## Don't forget to add the `Turbo` dependency:
+
+ 1. Click File → Add Packages…
+ 2. In the search box in the upper right, enter:
+    https://github.com/hotwired/turbo-ios
+ 3. Click Add Package
+ 4. Click Add Package, again
+
+ */
+
 import Turbo
 import UIKit
 import WebKit
