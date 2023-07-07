@@ -2,11 +2,11 @@ import Turbo
 import UIKit
 import WebKit
 
-let baseURL = URL(string: "http://localhost:3000")!
+let rootURL = URL(string: "http://localhost:3000")!
 
 class TurboNavigationController: UINavigationController {
     func visitRootURL() {
-        let visitable = VisitableViewController(url: baseURL)
+        let visitable = VisitableViewController(url: rootURL)
         pushViewController(visitable, animated: true)
         session.visit(visitable)
     }
