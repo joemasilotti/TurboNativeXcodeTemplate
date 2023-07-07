@@ -19,16 +19,18 @@ Create a new directory for custom Xcode project templates. Then clone this repo 
 ```bash
 export DIR=~/Library/Developer/Xcode/Templates/Custom\ Templates
 mkdir -p $DIR
-git clone git@github.com:joemasilotti/TurboNativeXcodeTemplate.git $DIR/Turbo\ Native\ App.xctemplate
+git clone https://github.com/joemasilotti/TurboNativeXcodeTemplate.git $DIR/Turbo\ Native\ App.xctemplate
 ```
 
 ### Create a new project
 
-Open Xcode and create a new project via File → Project...
+Open Xcode and create a new project via File → New → Project…
 
 Select iOS from the tabs across the top and scroll to the bottom.
 
 Select _Turbo Native App_, click Next, enter the name of your app, and click Next again.
+
+You might also need to add an organization identifier if you aren't signed in to an App Store Connect team in Xcode.
 
 ### Add the Turbo Native package dependency
 
