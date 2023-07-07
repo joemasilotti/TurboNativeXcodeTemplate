@@ -1,17 +1,9 @@
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder {
     var window: UIWindow?
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = scene as? UIWindowScene
-        else { fatalError("Expected a UIWindowScene.") }
-
-        createWindow(in: windowScene)
-        navigationController.visitRootURL()
-    }
-
-    // MARK: - Private
+    // MARK: Private
 
     private let navigationController = TurboNavigationController()
 
@@ -20,5 +12,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         window.rootViewController = navigationController
+    }
+}
+
+// MARK: UIWindowSceneDelegate
+
+extension SceneDelegate: UIWindowSceneDelegate {
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = scene as? UIWindowScene
+        else { fatalError("Expected a UIWindowScene.") }
+
+        createWindow(in: windowScene)
+        navigationController.visitRootURL()
     }
 }

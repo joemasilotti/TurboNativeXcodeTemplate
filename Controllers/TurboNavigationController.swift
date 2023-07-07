@@ -24,6 +24,8 @@ class TurboNavigationController: UINavigationController {
     }()
 }
 
+// MARK: SessionDelegate
+
 extension TurboNavigationController: SessionDelegate {
     func session(_ session: Session, didProposeVisit proposal: VisitProposal) {
         let controller = VisitableViewController(url: proposal.url)
