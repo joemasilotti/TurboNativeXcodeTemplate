@@ -106,18 +106,18 @@
 			<string>Resources</string>
 		</dict>
 	</dict>
-	<key>Options</key>
+	<key>Dependencies</key>
 	<array>
 		<dict>
-			<key>Dependencies</key>
-			<array>
-				<dict>
-					<key>Package</key>
-					<string>https://github.com/hotwired/turbo-ios</string>
-					<key>Version</key>
-					<string>7.0.0-rc.9</string>
-				</dict>
-			</array>
+			<key>URL</key>
+			<string>https://github.com/MihaelIsaev/UIKitPlus</string>
+			<key>Requirement</key>
+			<dict>
+				<key>Kind</key>
+				<string>upToNextMajorVersion</string>
+				<key>MinimumVersion</key>
+				<string>1.18.0</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
