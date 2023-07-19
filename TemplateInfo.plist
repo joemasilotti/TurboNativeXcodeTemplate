@@ -74,8 +74,6 @@
 			<string>Configuration/Info.plist</string>
 			<key>Group</key>
 			<string>Configuration</string>
-			<key>TargetIdentifiers</key>
-			<array/>
 		</dict>
 		<key>Controllers/TurboNavigationController.swift</key>
 		<dict>
