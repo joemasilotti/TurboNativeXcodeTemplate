@@ -18,9 +18,8 @@ let rootURL = URL(string: "http://localhost:3000")!
 
 class TurboNavigationController: UINavigationController {
     func visitRootURL() {
-        let visitable = VisitableViewController(url: rootURL)
-        pushViewController(visitable, animated: true)
-        session.visit(visitable)
+        let proposal = VisitProposal(url: rootURL, options: VisitOptions())
+        visit(proposal)
     }
 
     // MARK: Private
@@ -34,15 +33,19 @@ class TurboNavigationController: UINavigationController {
         session.delegate = self
         return session
     }()
+
+    private func visit(_ proposal: VisitProposal) {
+        let visitable = VisitableViewController(url: proposal.url)
+        pushViewController(visitable, animated: true)
+        session.visit(visitable, options: proposal.options)
+    }
 }
 
 // MARK: SessionDelegate
 
 extension TurboNavigationController: SessionDelegate {
     func session(_ session: Session, didProposeVisit proposal: VisitProposal) {
-        let controller = VisitableViewController(url: proposal.url)
-        session.visit(controller, options: proposal.options)
-        pushViewController(controller, animated: true)
+        visit(proposal)
     }
 
     func session(_ session: Session, didFailRequestForVisitable visitable: Visitable, error: Error) {
