@@ -106,5 +106,19 @@
 			<string>Resources</string>
 		</dict>
 	</dict>
+	<key>Dependencies</key>
+	<array>
+		<dict>
+			<key>URL</key>
+			<string>https://github.com/MihaelIsaev/UIKitPlus</string>
+			<key>Requirement</key>
+			<dict>
+				<key>Kind</key>
+				<string>upToNextMajorVersion</string>
+				<key>MinimumVersion</key>
+				<string>1.18.0</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>
